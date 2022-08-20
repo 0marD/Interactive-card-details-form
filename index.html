@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <!-- css style -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./sass/style.css" />
+
+  <!-- font link -->
+  <link rel=" preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet" />
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <main class="main">
+    <section class="main__top">
+      <div class="card cardFront">
+        <img src="./images/card-logo.svg" alt="Company logo" class="cardFront__logo" />
+        <p class="cardFront__number">0000 0000 0000 0000</p>
+        <div class="cardFront__details">
+          <p class="cardFront__details_name">Jane Appleseed</p>
+          <p class="cardFront__details__date">
+            <span class="detailsDate__month">00</span>/<span class="detailsDate__year">00</span>
+          </p>
+        </div>
+      </div>
+      <div class="card cardBack">
+        <p class="cardBack__Cvc">000</p>
+      </div>
+    </section>
+
+    <section class="main__bottom">
+      <form class="form" action="">
+        <label for="cardHolder" class="form__label">cardHolder name</label>
+        <input class="form__input" type="text" name="Cardholder" placeholder="e.g Jane Appleseed" id="cardHolder" />
+        <div class="form__Cardholder--error error"></div>
+        <label for="cardNumber" class="form__label">card Number</label>
+        <input class="form__input" type="text" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000" id="cardNumber"
+          maxlength="19" />
+        <div class="form__CardNumber--error error"></div>
+
+        <div class="form__DateCvc">
+          <label for="cardMonth" class="form__label">Exp. Date (MM/YY)</label>
+          <label for="cardCvc" class="form__label">CVC</label>
+
+          <div class="form__date">
+            <input type="text" class="form__input" placeholder="MM" maxlength="2" name="cardMonth" id="cardMonth" />
+            <input type="text" class="form__input" placeholder="YY" maxlength="2" name="cardYear" id="cardYear" />
+          </div>
+
+          <input type="text" class="form__input" placeholder="e.g 123" maxlength="3" name="cardCvc" id="cardCvc" />
+
+          <div class="formError__container">
+            <div class="formInput__mm--error error"></div>
+            <div class="formInput__yy--error error"></div>
+          </div>
+
+          <div class="formInput__cvc--error error"></div>
+        </div>
+        <input type="submit" value="Confirm" class="form__submit" />
+      </form>
+
+      <!-- thanks section -->
+      <section class="thanksSection">
+        <figure class="thanksSection__image">
+          <img src="./images/icon-complete.svg" alt="checked icon" />
+        </figure>
+        <h1 class="thanksSection__heading">Thank You!</h1>
+        <p class="thanksSection__thanks">We've added your card details</p>
+        <button class="thanksSection__button">Continue</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

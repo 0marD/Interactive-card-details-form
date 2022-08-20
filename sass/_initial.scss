@@ -1,0 +1,16 @@
+@use 'variables';
+
+:root{
+    font-size: 18px;
+}
+
+body{
+font-family: variables.$font;
+display: flex;
+/* From https://css.glass */
+background: rgba(33, 9, 47, 0.889);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9.1px);
+-webkit-backdrop-filter: blur(9.1px);
+border: 1px solid rgba(33, 9, 47, 0.31);
+}
